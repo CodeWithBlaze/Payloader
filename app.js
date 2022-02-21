@@ -38,7 +38,7 @@ function payloadTemplate(payloads){
                         <h4>${payload.name}</h4>
                         <p>${payload.description}</p>
                     </div>
-                    <button>Download</button>
+                    <button><a class="download" href="${payload.url}">Download</a></button>
                     </div>`
     }
     document.getElementById('payload').innerHTML += template;
