@@ -6,6 +6,7 @@ function showElement(element,displayType){
 }
 function login(event){
     event.preventDefault();
+    document.getElementById('cover').style.display = "flex";
     const input1 = document.getElementById('input1').value;
     const input2 = document.getElementById('input2').value;
     const input3 = document.getElementById('input3').value;
@@ -18,8 +19,10 @@ function login(event){
         removeElement("form")
         showElement("payload","block")
         payloadTemplate(res.data.data);
+        document.getElementById('cover').style.display = "none";
     }).catch((err)=>{
         console.log(err);
+        document.getElementById('cover').style.display = "none";
     })
 }
 function getToastColorByType(type){
